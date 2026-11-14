@@ -1,40 +1,35 @@
-# Kyle Askeland — personal site
+# Personal website
 
-A lightweight portfolio and technical blog, hosted with GitHub Pages and Jekyll. No local setup required.
+This is a minimal GitHub Pages site using Jekyll. Everything is hosted by GitHub, and there are no local setup steps.
 
-## Publishing a blog post
+## Publish an article
 
-1. In the GitHub web interface, make a new branch.
-2. Create a Markdown file in `_posts/` named `YYYY-MM-DD-your-post-title.md`.
-3. Start the file with front matter, then write Markdown:
+1. Open the **[_posts](_posts)** folder in GitHub.
+2. Add a file named `YYYY-MM-DD-my-article.md` (for example `2026-11-14-first-post.md`).
+3. Include this at the top of the file:
 
 ```markdown
 ---
 layout: post
-title: "Your article title"
-description: "One sentence about the article."
-date: 2026-11-11
+title: "My article title"
+date: 2026-11-14
 ---
 
-Your article starts here.
+Write the article in Markdown here.
 ```
 
-4. Open a pull request targeting `main`.
-5. Merge when ready. GitHub Pages builds and publishes posts from `main` automatically.
+4. Commit the file to `main`. GitHub Pages automatically rebuilds the homepage, adds the article to the list, and creates its individual page at `/blog/my-article/`.
 
-The blog list on `/blog/` updates automatically. No article is published until its file is merged into `main`. Dates should not be in the future relative to the build time.
+Posts are shown newest first. Use today's or a past date: Jekyll does not publish future-dated posts by default. File names must follow `YYYY-MM-DD-title.md`, and the YAML front matter (`---` lines) is required.
 
-## Website pages
+## Edit the site
 
-- `index.md`: homepage
-- `about/index.md`: About
-- `projects/index.md`: Projects
-- `blog/index.html`: blog listing
-- `_layouts/`: site and post templates
-- `assets/css/style.css`: styling
+- `index.html` — homepage bio and post listing
+- `_layouts/post.html` — individual article layout
+- `_layouts/default.html` — HTML shell
+- `assets/css/style.css` — minimal styling
+- `_config.yml` — Jekyll settings
 
-## GitHub Pages settings
+If GitHub Pages is not enabled: **Settings → Pages → Deploy from a branch → main → /(root)**.
 
-In **Settings → Pages**, choose **Deploy from a branch**, **main**, and **/(root)**. Jekyll is built by GitHub Pages. The resulting site is https://kyle-askeland.github.io.
-
-This site uses standard Jekyll without third-party themes or plugins. Layouts and styling can be edited directly in GitHub.
+Site: https://kyle-askeland.github.io
