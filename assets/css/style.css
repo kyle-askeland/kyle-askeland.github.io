@@ -1,18 +1,25 @@
 body {
-  max-width: 680px;
-  margin: 60px auto;
-  padding: 0 20px;
+  margin: 0;
+  background: #edf4fc;
+  color: #202b39;
   font: 16px/1.7 system-ui, sans-serif;
-  color: #222;
 }
+
+main {
+  width: min(680px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
 h1, h2 { line-height: 1.25; }
 h1 { margin-top: 0; }
 a { color: #245f9e; }
 .post-list { list-style: none; padding: 0; }
 .post-list li { margin: 14px 0; }
-.post-list small { display: block; color: #666; }
-pre { overflow-x: auto; padding: 12px; background: #f5f5f5; }
+.post-list small { display: block; color: #607080; }
+pre { overflow-x: auto; padding: 12px; background: #e2eaf4; }
 img { max-width: 100%; height: auto; }
+
 @media (max-width: 720px) {
-  body { margin: 28px auto; }
+  main { padding: 32px 0; }
 }

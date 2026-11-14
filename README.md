@@ -1,12 +1,16 @@
 # Personal website
 
-This is a minimal GitHub Pages site using Jekyll. Everything is hosted by GitHub, and there are no local setup steps.
+A minimal GitHub Pages / Jekyll site. No local setup needed.
+
+## Edit the homepage
+
+Edit **[index.md](index.md)** directly in GitHub to change the bio or heading. The posts list below the bio is generated automatically by Jekyll—leave the Liquid code under `## Posts` in place.
 
 ## Publish an article
 
-1. Open the **[_posts](_posts)** folder in GitHub.
-2. Add a file named `YYYY-MM-DD-my-article.md` (for example `2026-11-14-first-post.md`).
-3. Include this at the top of the file:
+1. Open the **[_posts](_posts)** directory in GitHub.
+2. Create a Markdown file named `YYYY-MM-DD-my-article.md`, for example `2026-11-14-first-post.md`.
+3. Start it with:
 
 ```markdown
 ---
@@ -18,18 +22,17 @@ date: 2026-11-14
 Write the article in Markdown here.
 ```
 
-4. Commit the file to `main`. GitHub Pages automatically rebuilds the homepage, adds the article to the list, and creates its individual page at `/blog/my-article/`.
+4. Commit to `main`. GitHub Pages rebuilds the site, puts the new post on the homepage, and creates a page at `/blog/my-article/`.
 
-Posts are shown newest first. Use today's or a past date: Jekyll does not publish future-dated posts by default. File names must follow `YYYY-MM-DD-title.md`, and the YAML front matter (`---` lines) is required.
+Posts appear newest first. Future-dated posts are not published by default. Use filenames of the form `YYYY-MM-DD-title.md` and keep the YAML front matter.
 
-## Edit the site
+## Other files
 
-- `index.html` — homepage bio and post listing
-- `_layouts/post.html` — individual article layout
-- `_layouts/default.html` — HTML shell
-- `assets/css/style.css` — minimal styling
+- `_layouts/post.html` — individual article page
+- `_layouts/default.html` — shared HTML shell
+- `assets/css/style.css` — shared styling for homepage and posts
 - `_config.yml` — Jekyll settings
 
-If GitHub Pages is not enabled: **Settings → Pages → Deploy from a branch → main → /(root)**.
+Enable GitHub Pages at **Settings → Pages → Deploy from a branch → main → /(root)** if it is not already enabled.
 
 Site: https://kyle-askeland.github.io
