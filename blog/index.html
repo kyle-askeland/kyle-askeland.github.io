@@ -1,0 +1,12 @@
+---
+layout: default
+title: Writing
+description: Technical writing, engineering notes and project learnings.
+permalink: /blog/
+---
+<section class="page-intro"><p class="eyebrow">NOTES & IDEAS</p><h1>Writing<span class="brand-dot">.</span></h1><p class="lede">Technical notes, engineering experiments, and things worth documenting.</p></section>
+<section class="section">
+  {% if site.posts.size > 0 %}
+  <div class="post-list">{% for post in site.posts %}<a class="post-row" href="{{ post.url | relative_url }}"><div><span class="post-meta">{{ post.date | date: '%b %-d, %Y' }}</span><h2>{{ post.title | escape }}</h2><p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 24 }}</p></div><span aria-hidden="true">↗</span></a>{% endfor %}</div>
+  {% else %}<p class="quiet">No articles published yet. When a Markdown file is merged into <code>_posts/</code> on <code>main</code>, it will appear here.</p>{% endif %}
+</section>

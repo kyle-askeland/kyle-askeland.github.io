@@ -1,0 +1,9 @@
+title: "Kyle Askeland"
+description: "Software engineering, cybersecurity, and things I'm building."
+url: "https://kyle-askeland.github.io"
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:title/
+timezone: America/New_York
+exclude:
+  - README.md
